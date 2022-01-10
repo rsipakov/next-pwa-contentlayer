@@ -15,7 +15,7 @@ module.exports = withPlugins([
 		pwa: {
 			dest: 'public',
 			runtimeCaching
-		}
+		},
+		i18n,
 	}),
-	i18n,
 ])
