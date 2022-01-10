@@ -1,24 +1,50 @@
 {
-	"compilerOptions": {
-		"target": "es5",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"]
-		},
-		"incremental": true
+  "compilerOptions": {
+	"target": "es5",
+	/* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+	"lib": [
+	  "dom",
+	  "dom.iterable",
+	  "esnext"
+	],
+	"allowJs": true,
+	/* Allow javascript files to be compiled. */
+	"skipLibCheck": true,
+	"strict": false,
+	/* Enable all strict type-checking options. */
+	"forceConsistentCasingInFileNames": true,
+	/* Disallow inconsistently-cased references to the same file. */
+	"noEmit": true,
+	/* Do not emit outputs. */
+	"esModuleInterop": true,
+	/* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+	"module": "esnext",
+	/* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+	"moduleResolution": "node",
+	/* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+	"resolveJsonModule": true,
+	"downlevelIteration": true,
+	/* "new Set() with typescript" will work while targeting ES5, See more references: https://github.com/Microsoft/TypeScript/issues/21058 and https://stackoverflow.com/questions/33464504/using-spread-syntax-and-new-set-with-typescript*/
+	"isolatedModules": true,
+	/* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+	"jsx": "preserve",
+	/* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+	"baseUrl": ".",
+	/* Base directory to resolve non-absolute module names. */
+	"paths": {
+	  "@/*": [
+		"./*"
+	  ]
 	},
-	"exclude": ["node_modules"],
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+	"incremental": true
+	/* Enable incremental compilation */
+  },
+  "exclude": [
+	"node_modules"
+  ],
+  "include": [
+	"next-env.d.ts",
+	"**/*.ts",
+	"**/*.tsx"
+  ]
 }

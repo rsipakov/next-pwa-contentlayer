@@ -1,11 +1,17 @@
 import Page from '@/components/page'
 import Section from '@/components/section'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
-const Index = () => (
+const Index = () => {
+
+	const { t } = useTranslation('common');
+
+	return (
 	<Page>
 		<Section>
 			<h2 className='text-xl font-semibold text-zinc-800 dark:text-zinc-200'>
-				We grow a lot of rice.
+				{t('index.title')}
 			</h2>
 
 			<div className='mt-2'>
@@ -31,6 +37,16 @@ const Index = () => (
 			</div>
 		</Section>
 	</Page>
-)
+	)
+}
 
 export default Index
+
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+			// Will be passed to the page component as props
+		},
+	};
+}
