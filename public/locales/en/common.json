@@ -1,5 +1,14 @@
 {
   "index": {
 	"title": "I have a red cap"
+  },
+  "blog": {
+	"title": "Blog",
+	"allTags": "All Tags",
+	"allPosts": "All Articles",
+	"noFound": "No posts found",
+	"searchArticles": "Search articles",
+	"intro1": "I have written",
+	"intro2": "articles on my blog. Use the search below to filter by title."
   }
 }
