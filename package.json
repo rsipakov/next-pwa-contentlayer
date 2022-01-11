@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"analyze": "cross-env ANALYZE=true next build"
 	},
 	"dependencies": {
 		"contentlayer": "^0.0.33",
@@ -17,6 +18,7 @@
 		"next-i18next": "^10.1.0",
 		"next-pwa": "^5.4.4",
 		"next-themes": "^0.0.15",
+		"preact": "^10.6.4",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"reading-time": "^1.5.0",
@@ -36,6 +38,7 @@
 		"eslint": "^8.4.1",
 		"eslint-config-next": "^12.0.7",
 		"eslint-config-prettier": "^8.3.0",
+		"file-loader": "^6.2.0",
 		"postcss": "^8.4.4",
 		"prettier": "^2.5.1",
 		"tailwindcss": "^3.0.0",
