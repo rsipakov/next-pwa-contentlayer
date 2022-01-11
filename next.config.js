@@ -12,7 +12,6 @@ module.exports = withPlugins([
 	[withBundleAnalyzer],
 	[withContentlayer({})],
 	withPWA({
-		i18n,
 		images: {
 			domains: [
 				'i.scdn.co', // Spotify Album Art
@@ -55,5 +54,6 @@ module.exports = withPlugins([
 			dest: 'public',
 			runtimeCaching
 		},
+		i18n,
 	}),
 ])
