@@ -18,6 +18,7 @@ module.exports = withPlugins([
 				'pbs.twimg.com' // Twitter Profile Picture
 			]
 		},
+		i18n,
 		webpack: (config, { dev, isServer }) => {
 			config.module.rules.push({
 				test: /\.(png|jpe?g|gif|mp4)$/i,
@@ -49,11 +50,9 @@ module.exports = withPlugins([
 
 			return config
 		},
-
 		pwa: {
 			dest: 'public',
 			runtimeCaching
 		},
-		i18n,
-	}),
+	})
 ])
