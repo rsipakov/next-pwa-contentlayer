@@ -12,10 +12,6 @@ module.exports = withPlugins([
 	[withBundleAnalyzer],
 	[withContentlayer({})],
 	withPWA({
-		pwa: {
-			dest: 'public',
-			runtimeCaching
-		},
 		i18n,
 		images: {
 			domains: [
@@ -50,6 +46,10 @@ module.exports = withPlugins([
 				})
 			}
 			return config;
-		}
+		},
+		pwa: {
+			dest: 'public',
+			runtimeCaching
+		},
 	}),
 ])
