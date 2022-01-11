@@ -1,54 +1,32 @@
-<p align="center">
-	<img alt="Rice Bowl" src="public/images/icon-512.png" width="90">
-	<h2 align="center">Next PWA Template</h2>
+_**PROJECT IN PROGRESS**_
+
+# Next.js PWA
+
+<p align="left">
+<a href="https://vercel.com?utm_source=jamstack-os&utm_campaign=oss">
+	<img alt="Powered by Vercel" src="https://img.shields.io/badge/Deployed%20by%20Vercel-000000.svg?style=flat&logo=vercel&labelColor=000" height="20">
+</a>
+<a href="https://nextjs.org/">
+	<img alt="Made by Next.js" src="https://img.shields.io/badge/Built%20with%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000" height="20">
+</a>
 </p>
 
-<p align="center">Fluffless app template to inspire less</p>
-
-<p align="center">
-	<a href="https://next-pwa-template.now.sh">Live demo</a>
-</p>
-
-<p align="center">
-	<a href="https://web.dev/measure">
-		<img alt="100% lighthouse scores" src="https://img.shields.io/badge/lighthouse-100%25-845EF7.svg?logo=lighthouse&logoColor=white&style=flat-square" />
-	</a>
-</p>
+## Credit:
+- [Next PWA Template](https://github.com/mvllow/next-pwa-template)
+- [leerob.io](https://github.com/leerob/leerob.io)
+- [Tailwind Nextjs Starter](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+- [blog.maximeheckel.com](https://blog.maximeheckel.com/)
+- [Thang Huu Vu](https://www.thvu.dev)
+- [Clarence](https://theodorusclarence.com/)
 
 ## Features
 
-- ✨ Fluffless PWA using Next 12
-- 🌗 Lovely night/day themes
-- 🦄 Easily removable [nice-to-haves](#use-only-what-you-need)
-- 📱 Native-like mobile experience
-- 📦 Neatly wrapped like that avocado you got for christmas
+- [x] [Next.js](https://github.com/vercel/next.js)
+- [x] [next-themes](https://github.com/pacocoursey/next-themes)
+- [x] [PWA Plugin for Next.js](https://github.com/shadowwalker/next-pwa)
+- [x] [next-i18next](https://github.com/isaachinman/next-i18next)
+- [x] [Contentlayer](https://github.com/contentlayerdev/contentlayer)
 
-## Getting started
 
-1. [Use this template](https://github.com/mvllow/next-pwa-template/generate)
-2. Replace `public/images` with your own
-3. Enjoy ✨
-
-## Use only what you need
-
-Fluffless doesn't mean "start with nothing". The goal of this template is to be an entry into maintainable apps.
-
-**The essentials**
-
-- Typescript, made easy with Next.js
-- [tailwindcss](https://github.com/tailwindlabs/tailwindcss) for utility-first styling
-- [next-pwa](https://github.com/shadowwalker/next-pwa) for offline support
-
-**Nice to haves**
-
-- [next-themes](https://github.com/pacocoursey/next-themes) or similar for low stress theming
-
-## Gallery
-
-### Desktop
-
-<img alt="" src="public/images/macos.png" width="500" />
-
-### Mobile
-
-<img alt="" src="public/images/ios.png" width="500" />
+- [ ] [Static Tweets with MDX](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/)
+- [ ] [Framer Motion](https://www.framer.com/docs/animation/)
