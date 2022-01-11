@@ -2,7 +2,7 @@
 PROJECT IN PROGRESS
 </h4>
 
-# Next.js PWA
+# Next.js PWA Contentlayer
 
 <p align="left">
 <a href="https://vercel.com?utm_source=jamstack-os&utm_campaign=oss">
