@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import LocaleSelect from '@/components/LocaleSelect'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 
 const links = [
 	{ label: 'Story', href: '/story' },
@@ -20,7 +22,7 @@ const Appbar = () => {
 					</Link>
 
 					<nav className='space-x-6 flex items-center'>
-						<div className='hidden sm:block'>
+						<div className='sm:block'>
 							<div className='space-x-6 flex items-center'>
 								{links.map(({ label, href }) => (
 									<Link key={label} href={href}>
@@ -36,6 +38,12 @@ const Appbar = () => {
 									</Link>
 								))}
 							</div>
+						</div>
+						<div>
+							<LocaleSelect />
+						</div>
+						<div>
+							<ThemeSwitcher />
 						</div>
 
 						<div

@@ -93,7 +93,6 @@ export default function IndexNews({
 					</h3>
 					{!filteredBlogPosts.length && (
 						<p className='mb-4 text-gray-600 dark:text-gray-400'>
-							No posts found.
 							{t('blog.noFound')}
 						</p>
 					)}
