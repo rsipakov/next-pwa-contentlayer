@@ -58,6 +58,10 @@ const securityHeaders = [
 		value: 'camera=(), microphone=(), geolocation=()',
 	},
 ]
+// FIXME: security header does not work under root directory in production.
+// https://securityheaders.com/?q=next-pwa-contentlayer.vercel.app&followRedirects=on
+// but work under path for example: https://securityheaders.com/?q=https%3A%2F%2Fnext-pwa-contentlayer.vercel.app%2Fblog&followRedirects=on
+
 
 module.exports = withPlugins([
 	[withBundleAnalyzer],
