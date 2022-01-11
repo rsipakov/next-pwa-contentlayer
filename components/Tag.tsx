@@ -1,4 +1,5 @@
-import Link from '@/components/Link'
+//Use regular import fot Link
+import Link from 'next/link'
 import kebabCase from "@/lib/kebabCase";
 
 const Tag = ({ text }: { text: string }) => {

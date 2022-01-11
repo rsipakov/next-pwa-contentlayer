@@ -17,5 +17,11 @@ module.exports = withPlugins([
 			runtimeCaching
 		},
 		i18n,
+		images: {
+			domains: [
+				'i.scdn.co', // Spotify Album Art
+				'pbs.twimg.com' // Twitter Profile Picture
+			]
+		},
 	}),
 ])
