@@ -1,4 +1,6 @@
-_**PROJECT IN PROGRESS**_
+<h4 style="font-style: italic; text-align: center; color: yellowgreen;">
+PROJECT IN PROGRESS
+</h4>
 
 # Next.js PWA
 
@@ -19,7 +21,7 @@ _**PROJECT IN PROGRESS**_
 - [Thang Huu Vu](https://www.thvu.dev)
 - [Clarence](https://theodorusclarence.com/)
 
-## Features
+## Roadmap
 
 - [x] [Next.js](https://github.com/vercel/next.js)
 - [x] [next-themes](https://github.com/pacocoursey/next-themes)
