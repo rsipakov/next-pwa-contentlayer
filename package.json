@@ -1,6 +1,6 @@
 {
-	"name": "next-pwa-template",
-	"version": "0.0.0",
+	"name": "next-pwa-contentlayer",
+	"version": "0.0.1",
 	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
