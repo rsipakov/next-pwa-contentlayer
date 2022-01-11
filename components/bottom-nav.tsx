@@ -70,8 +70,8 @@ const links = [
 		),
 	},
 	{
-		label: 'Recipes',
-		href: '/recipes',
+		label: 'Blog',
+		href: '/blog',
 		icon: (
 			<svg
 				viewBox='0 0 15 15'
