@@ -1,5 +1,5 @@
-//Use regular import fot Link
-import Link from 'next/link'
+// When used CustomLink, then the tag's links on "separate lines". Maybe need fix css for CustomLink in this case.
+import Link from '@/components/Link'
 import kebabCase from "@/lib/kebabCase";
 
 const Tag = ({ text }: { text: string }) => {
