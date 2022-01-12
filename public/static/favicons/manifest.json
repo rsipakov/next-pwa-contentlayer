@@ -1,5 +1,5 @@
 {
- "name": "App",
+ "name": "Red Cap",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -39,9 +39,9 @@
   }
  ],
   "start_url": "/?source=pwa",
-  "background_color": "#1d2020",
+  "background_color": "#E4E4E7",
   "orientation": "portrait",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#1d2020"
+  "theme_color": "#E4E4E7"
 }
