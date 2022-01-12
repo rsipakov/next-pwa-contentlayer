@@ -29,7 +29,7 @@ PROJECT IN PROGRESS
 - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
 - [x] [Contentlayer](https://github.com/contentlayerdev/contentlayer)
 
-- [ ] Security Headers
+- [ ] [Security Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 - [ ] SEO
 - [ ] [Static Tweets with MDX](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/)
 - [ ] [Framer Motion](https://www.framer.com/docs/animation/)
