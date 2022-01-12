@@ -5,7 +5,6 @@ class MyDocument extends Document {
 		return (
 			<Html lang='en' className="scroll-smooth">
 				<Head>
-					<title>Rice Bowl</title>
 					<meta charSet='utf-8' />
 					<meta name='mobile-web-app-capable' content='yes' />
 					<meta name='apple-mobile-web-app-capable' content='yes' />
@@ -25,10 +24,6 @@ class MyDocument extends Document {
 						name='theme-color'
 						content='#18181b'
 						media='(prefers-color-scheme: dark)'
-					/>
-					<meta
-						name='viewport'
-						content='width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover'
 					/>
 					<link rel='apple-touch-icon' href='/images/icon-maskable-512.png' />
 					<link rel='icon' type='image/png' href='/images/favicon.png' />
