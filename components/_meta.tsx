@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const Meta = () => (
+const _meta = () => (
 	<Head>
 		<title>Rice Bowl</title>
 		<meta charSet='utf-8' />
@@ -33,4 +33,4 @@ const Meta = () => (
 	</Head>
 )
 
-export default Meta
+export default _meta
