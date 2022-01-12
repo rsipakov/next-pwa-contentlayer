@@ -1,5 +1,7 @@
 {
- "name": "Red Cap",
+  "name": "Red Cap",
+  "short_name": "Red Cap",
+  "description": "App about Red Cap",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
