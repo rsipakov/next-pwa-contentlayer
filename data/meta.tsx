@@ -25,7 +25,7 @@ const Meta = () => (
 		/>
 		<meta
 			name='viewport'
-			content='width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover'
+			content='width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5'
 		/>
 		<meta
 			name="msapplication-TileColor"
