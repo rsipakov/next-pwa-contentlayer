@@ -1,7 +1,7 @@
 {
-	"name": "Rice Bowl",
-	"short_name": "Rice Bowl",
-	"description": "Fluffless jasmine rice for those cold winter nights",
+	"name": "Red Cap",
+	"short_name": "Red Cap",
+	"description": "Website about Red Cap",
 	"icons": [
 		{
 			"src": "/favicon/icon-192.png",
@@ -27,9 +27,9 @@
 		}
 	],
 	"start_url": "/?source=pwa",
-	"background_color": "#1d2020",
+	"background_color": "#E4E4E7",
 	"orientation": "portrait",
 	"display": "standalone",
 	"scope": "/",
-	"theme_color": "#1d2020"
+	"theme_color": "#E4E4E7"
 }
