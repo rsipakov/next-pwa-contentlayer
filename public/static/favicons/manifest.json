@@ -38,7 +38,19 @@
    "sizes": "192x192",
    "type": "image\/png",
    "density": "4.0"
-  }
+  },
+   {
+	 "src": "/favicon/icon-maskable-192.png",
+	 "type": "image/png",
+	 "sizes": "192x192",
+	 "purpose": "maskable"
+   },
+   {
+	 "src": "/favicon/icon-maskable-512.png",
+	 "type": "image/png",
+	 "sizes": "512x512",
+	 "purpose": "maskable"
+   }
  ],
   "start_url": "/?source=pwa",
   "background_color": "#E4E4E7",
