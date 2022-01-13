@@ -29,7 +29,7 @@ const Meta = () => (
 		/>
 		<link rel='apple-touch-icon' href='/favicon/icon-maskable-512.png' />
 		<link rel='icon' type='image/png' href='/favicon/favicon.png' />
-		<link rel='manifest' href='/static/favicons/manifest.json' />
+		<link rel='manifest' href='/manifest.json' />
 	</Head>
 )
 export default Meta
