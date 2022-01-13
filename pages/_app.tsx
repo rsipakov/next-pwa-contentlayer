@@ -12,7 +12,9 @@ const App = ({ Component, pageProps }: AppProps) => {
 			defaultTheme='system'
 			disableTransitionOnChange
 		>
-			<Meta />
+			<Head>
+				<meta content="width=device-width, initial-scale=1" name="viewport" />
+			</Head>
 			<Component {...pageProps} />
 		</ThemeProvider>
 	)
