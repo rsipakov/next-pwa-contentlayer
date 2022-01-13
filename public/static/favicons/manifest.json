@@ -14,13 +14,13 @@
 			"sizes": "512x512"
 		},
 		{
-			"src": "/favicon/icon-maskable-192.png",
+			"src": "/static/favicons/maskable_icon_x192.png",
 			"type": "image/png",
 			"sizes": "192x192",
 			"purpose": "maskable"
 		},
 		{
-			"src": "/favicon/icon-maskable-512.png",
+			"src": "/static/favicons/maskable_icon_x512.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "maskable"
