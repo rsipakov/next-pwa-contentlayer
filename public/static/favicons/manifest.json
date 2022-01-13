@@ -1,35 +1,63 @@
 {
-	"name": "Red Cap",
-	"short_name": "Red Cap",
-	"description": "Website about Red Cap",
-	"icons": [
+  "name": "Red Cap",
+  "short_name": "Red Cap",
+  "description": "Website about Red Cap",
+  "icons": [
+	{
+	  "src": "/static/favicons/maskable_icon_x192.png",
+	  "type": "image/png",
+	  "sizes": "192x192",
+	  "purpose": "maskable"
+	},
+	{
+	  "src": "/static/favicons/maskable_icon_x512.png",
+	  "type": "image/png",
+	  "sizes": "512x512",
+	  "purpose": "maskable"
+	}
+  ],
+  "shortcuts": [
+	{
+	  "name": "Open Home",
+	  "short_name": "Home",
+	  "url": "/",
+	  "description": "Home page",
+	  "icons": [
 		{
-			"src": "/favicon/icon-192.png",
-			"type": "image/png",
-			"sizes": "192x192"
-		},
-		{
-			"src": "/favicon/icon-512.png",
-			"type": "image/png",
-			"sizes": "512x512"
-		},
-		{
-			"src": "/static/favicons/maskable_icon_x192.png",
-			"type": "image/png",
-			"sizes": "192x192",
-			"purpose": "maskable"
-		},
-		{
-			"src": "/static/favicons/maskable_icon_x512.png",
-			"type": "image/png",
-			"sizes": "512x512",
-			"purpose": "maskable"
+		  "src": "/static/favicons/android-chrome-192x192.png",
+		  "sizes": "192x192"
 		}
-	],
-	"start_url": "/?source=pwa",
-	"background_color": "#E4E4E7",
-	"orientation": "portrait",
-	"display": "standalone",
-	"scope": "/",
-	"theme_color": "#E4E4E7"
+	  ]
+	},
+	{
+	  "name": "Open Story",
+	  "short_name": "Story",
+	  "url": "/story",
+	  "description": "Story page",
+	  "icons": [
+		{
+		  "src": "/static/favicons/android-chrome-192x192.png",
+		  "sizes": "192x192"
+		}
+	  ]
+	},
+	{
+	  "name": "Open Blog",
+	  "short_name": "Blog",
+	  "url": "/blog",
+	  "description": "Blog page",
+	  "icons": [
+		{
+		  "src": "/static/favicons/android-chrome-192x192.png",
+		  "sizes": "192x192"
+		}
+	  ]
+	}
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#E4E4E7",
+  "orientation": "portrait",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#E4E4E7"
 }
