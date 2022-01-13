@@ -3,6 +3,7 @@ import { ThemeProvider } from 'next-themes'
 import '@/styles/globals.css'
 import { appWithTranslation } from 'next-i18next'
 import Head from "next/head";
+import Meta from '@/components/meta'
 
 const App = ({ Component, pageProps }: AppProps) => {
 	return (
@@ -11,13 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 			defaultTheme='system'
 			disableTransitionOnChange
 		>
-			<Head>
-				<title>Rice Bowl</title>
-				<meta
-					name='viewport'
-					content='width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover'
-				/>
-			</Head>
+			<Meta />
 			<Component {...pageProps} />
 		</ThemeProvider>
 	)

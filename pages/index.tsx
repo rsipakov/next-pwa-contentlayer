@@ -12,11 +12,6 @@ export default function IndexPage( { availableLocales }) {
 
 	return (
 	<Page>
-		<PageSeo
-			title={siteMetadata.siteName[locale]}
-			description={siteMetadata.siteDescription[locale]}
-			availableLocales={availableLocales}
-		/>
 		<Section>
 			<h2 className='text-xl font-semibold text-zinc-800 dark:text-zinc-200'>
 				{t('index.title')}
