@@ -22,8 +22,8 @@ class MyDocument extends Document {
 						content='#18181b'
 						media='(prefers-color-scheme: dark)'
 					/>
-					<link rel='apple-touch-icon' href='/favicon/icon-maskable-512.png' />
-					<link rel='icon' type='image/png' href='/favicon/favicon.png' />
+					<link rel='apple-touch-icon' href='/static/favicons/maskable_icon_x512.png' />
+					<link rel='icon' type='image/png' href='/static/favicons/maskable_icon_x512.png' />
 					<link rel='manifest' href='/static/favicons/manifest.json' />
 				</Head>
 				<body>

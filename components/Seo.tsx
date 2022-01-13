@@ -143,8 +143,4 @@ const favicons: Array<Favicons> = [
 		sizes: '16x16',
 		href: '/static/favicons/favicon-16x16.png',
 	},
-	{
-		rel: 'manifest',
-		href: '/static/favicons/manifest.json',
-	},
 ];
