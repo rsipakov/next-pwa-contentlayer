@@ -16,10 +16,6 @@ class MyDocument extends Document {
 						content='yes'
 					/>
 					<meta
-						name='apple-mobile-web-app-status-bar-style'
-						content='black-translucent'
-					/>
-					<meta
 						name='theme-color'
 						content='#f4f4f5'
 						media='(prefers-color-scheme: light)'
