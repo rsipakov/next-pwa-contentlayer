@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import LocaleSelect from '@/components/LocaleSelect'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
+import siteMetaData from '@/data/siteMetaData'
 
 const links = [
 	{ label: 'Story', href: '/story' },
@@ -10,6 +11,7 @@ const links = [
 
 const Appbar = () => {
 	const router = useRouter()
+	const { locale } = useRouter()
 
 	return (
 		<div className='pt-safe w-full bg-zinc-900 fixed top-0 left-0 z-20'>
@@ -17,7 +19,7 @@ const Appbar = () => {
 				<div className='mx-auto px-6 max-w-screen-md h-20 flex items-center justify-between'>
 					<Link href='/'>
 						<a>
-							<h1 className='font-medium'>Rice Bowl</h1>
+							<h1 className='font-medium'>{siteMetaData.siteName[locale]}</h1>
 						</a>
 					</Link>
 

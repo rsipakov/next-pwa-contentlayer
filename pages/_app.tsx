@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
-import Meta from '@/components/meta'
 import '@/styles/globals.css'
 import { appWithTranslation } from 'next-i18next'
+import Meta from '@/data/meta'
 
 const App = ({ Component, pageProps }: AppProps) => {
 	return (
@@ -18,3 +18,5 @@ const App = ({ Component, pageProps }: AppProps) => {
 }
 
 export default appWithTranslation(App);
+
+// Reference for "next-themes": https://www.npmjs.com/package/next-themes

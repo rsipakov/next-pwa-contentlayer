@@ -1,0 +1,73 @@
+{
+  "name": "Red Cap",
+  "short_name": "Red Cap",
+  "description": "Website about Red Cap",
+  "icons": [
+	{
+	  "src": "/static/favicons/android-chrome-192x192.png",
+	  "sizes": "192x192",
+	  "type": "image/png"
+	},
+	{
+	  "src": "/static/favicons/android-chrome-512x512.png",
+	  "sizes": "512x512",
+	  "type": "image/png"
+	},
+	{
+	  "src": "/static/favicons/maskable_icon_x192.png",
+	  "type": "image/png",
+	  "sizes": "192x192",
+	  "purpose": "maskable"
+	},
+	{
+	  "src": "/static/favicons/maskable_icon_x512.png",
+	  "type": "image/png",
+	  "sizes": "512x512",
+	  "purpose": "maskable"
+	}
+  ],
+  "shortcuts": [
+	{
+	  "name": "Open Home",
+	  "short_name": "Home",
+	  "url": "/",
+	  "description": "Home page",
+	  "icons": [
+		{
+		  "src": "/static/favicons/android-chrome-192x192.png",
+		  "sizes": "192x192"
+		}
+	  ]
+	},
+	{
+	  "name": "Open Story",
+	  "short_name": "Story",
+	  "url": "/story",
+	  "description": "Story page",
+	  "icons": [
+		{
+		  "src": "/static/favicons/android-chrome-192x192.png",
+		  "sizes": "192x192"
+		}
+	  ]
+	},
+	{
+	  "name": "Open Blog",
+	  "short_name": "Blog",
+	  "url": "/blog",
+	  "description": "Blog page",
+	  "icons": [
+		{
+		  "src": "/static/favicons/android-chrome-192x192.png",
+		  "sizes": "192x192"
+		}
+	  ]
+	}
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#E4E4E7",
+  "orientation": "portrait",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#E4E4E7"
+}
