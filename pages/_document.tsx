@@ -5,26 +5,6 @@ class MyDocument extends Document {
 		return (
 			<Html lang='en'>
 				<Head>
-					<meta charSet='utf-8'
-					/>
-					<meta
-						name='mobile-web-app-capable'
-						content='yes'
-					/>
-					<meta
-						name='apple-mobile-web-app-capable'
-						content='yes'
-					/>
-					<meta
-						name='theme-color'
-						content='#f4f4f5'
-						media='(prefers-color-scheme: light)'
-					/>
-					<meta
-						name='theme-color'
-						content='#18181b'
-						media='(prefers-color-scheme: dark)'
-					/>
 					<meta
 						name="msapplication-TileColor"
 						content="#e4e4e7"
@@ -57,10 +37,6 @@ class MyDocument extends Document {
 					<link
 						href="/static/favicons/favicon.ico"
 						rel="shortcut icon"
-					/>
-					<link
-						href='/static/favicons/manifest.json'
-						rel='manifest'
 					/>
 				</Head>
 				<body>
