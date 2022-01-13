@@ -5,6 +5,16 @@
   "icons": [
 	{
 	  "src": "/static/favicons/maskable_icon_x192.png",
+	  "sizes": "192x192",
+	  "type": "image/png"
+	},
+	{
+	  "src": "/static/favicons/maskable_icon_x512.png",
+	  "sizes": "512x512",
+	  "type": "image/png"
+	},
+	{
+	  "src": "/static/favicons/maskable_icon_x192.png",
 	  "type": "image/png",
 	  "sizes": "192x192",
 	  "purpose": "maskable"
