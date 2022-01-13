@@ -33,3 +33,6 @@ PROJECT IN PROGRESS
 - [ ] SEO // In Progress
 - [ ] [Static Tweets with MDX](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/)
 - [ ] [Framer Motion](https://www.framer.com/docs/animation/)
+
+## Lighthouse Report
+<img src="https://res.cloudinary.com/missioniz-cloud/image/upload/v1642059927/web%20development/nextjs-pwa-01132022_sv9e9b.png" width="360"/>
