@@ -3,7 +3,6 @@ import { ThemeProvider } from 'next-themes'
 import '@/styles/globals.css'
 import { appWithTranslation } from 'next-i18next'
 import Head from "next/head";
-import Meta from '@/components/meta'
 
 const App = ({ Component, pageProps }: AppProps) => {
 	return (
