@@ -32,5 +32,4 @@ const Meta = () => (
 		<link rel='manifest' href='/manifest.json' />
 	</Head>
 )
-
 export default Meta
