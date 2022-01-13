@@ -27,6 +27,11 @@ class MyDocument extends Document {
 						content='#18181b'
 						media='(prefers-color-scheme: dark)'
 					/>
+
+					<link rel='apple-touch-icon' href='/images/apple-touch-icon-180x180.png' />
+					<link rel='icon' type='image/png' href='/static/favicons/favicon.ico' />
+					<link rel='manifest' href='/static/favicons/manifest.json' />
+
 				</Head>
 				<body>
 					<Main />
