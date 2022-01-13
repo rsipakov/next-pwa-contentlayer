@@ -12,11 +12,14 @@ import Tag from '@/components/Tag'
 import path from 'path'
 import kebabCase from '@/lib/kebabCase'
 import Link from '@/components/Link'
+import siteMetaData from '@/data/siteMetaData'
+import { PageSeo } from '@/components/Seo'
+import { useRouter } from 'next/router'
 
 
-export default function IndexNews({
+export default function IndexBlog({
 																		posts,
-																		tags
+																		tags,
 																	}: InferGetStaticPropsType<typeof getStaticProps>) {
 	const [searchValue, setSearchValue] = useState('')
 
@@ -29,9 +32,14 @@ export default function IndexNews({
 	const sortedTags = Object.keys(tags).sort((a, b) =>
 		tags[b] - tags[a]
 	)
-
+	const { locale } = useRouter()
 	return (
 		<Page>
+			<PageSeo
+				title={`${siteMetaData.siteName[locale]} - ${siteMetaData.blogPageName[locale]}`}
+				description={siteMetaData.siteDescription[locale]}
+				availableLocales={undefined}
+			/>
 			<Section>
 				<div className='flex flex-col items-start justify-center max-w-2xl mx-auto mb-16'>
 					{/* #region === Page's introduction with search panel === */}

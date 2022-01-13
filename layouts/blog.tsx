@@ -6,6 +6,9 @@ import Subscribe from 'components/Subscribe'
 import ViewCounter from 'components/ViewCounter'
 import type { PropsWithChildren } from 'react'
 import type { Blog } from '.contentlayer/types'
+import siteMetaData from '@/data/siteMetaData'
+import { PageSeo } from '@/components/Seo'
+import { useRouter } from 'next/router'
 
 const editUrl = (slug) =>
 	`https://github.com/leerob/leerob.io/edit/main/data/blog/${slug}.mdx`
@@ -18,8 +21,14 @@ export default function BlogLayout({
 																		 children,
 																		 post
 																	 }: PropsWithChildren<{ post: Blog }>) {
+	const { locale } = useRouter()
 	return (
 		<Page>
+			<PageSeo
+				title={`${siteMetaData.siteName[locale]} - ${siteMetaData.blogPageName[locale]}`}
+				description={siteMetaData.siteDescription[locale]}
+				availableLocales={undefined}
+			/>
 			<Section>
 				<article className='flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16'>
 					<h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
