@@ -1,11 +1,12 @@
-import Link from 'next/link'
+import Link from '@/components/CustomLink'
 import { useRouter } from 'next/router'
 import LocaleSelect from '@/components/LocaleSelect'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import siteMetaData from '@/data/siteMetaData'
 
 const links = [
-	{ label: 'Story', href: '/story' },
+	{ label: 'Home', href: '/' },
+	{ label: 'Search', href: '/search' },
 	{ label: 'Blog', href: '/blog' },
 ]
 
@@ -15,8 +16,8 @@ const Appbar = () => {
 
 	return (
 		<div className='pt-safe w-full bg-zinc-900 fixed top-0 left-0 z-20'>
-			<header className='px-safe bg-zinc-100 border-b dark:bg-zinc-900 dark:border-zinc-800'>
-				<div className='mx-auto px-6 max-w-screen-md h-20 flex items-center justify-between'>
+			<header className='px-safe bg-primary-100 border-b dark:bg-primary-900 dark:border-primary-800'>
+				<div className='mx-auto px-6 max-w-screen-lg h-20 flex items-center justify-between'>
 					<Link href='/'>
 						<a>
 							<h1 className='font-medium'>{siteMetaData.siteName[locale]}</h1>
@@ -32,7 +33,7 @@ const Appbar = () => {
 											className={`text-sm ${
 												router.pathname === href
 													? 'text-indigo-500 dark:text-indigo-400'
-													: 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50'
+													: 'text-primary-600 hover:text-primary-900 dark:text-primary-400 dark:hover:text-primary-50'
 											}`}
 										>
 											{label}
@@ -47,15 +48,6 @@ const Appbar = () => {
 						<div>
 							<ThemeSwitcher />
 						</div>
-
-						<div
-							title='Gluten Free'
-							className='w-10 h-10 bg-zinc-200 dark:bg-zinc-800 bg-cover bg-center rounded-full shadow-inner'
-							style={{
-								backgroundImage:
-									'url(https://images.unsplash.com/photo-1612480797665-c96d261eae09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80)',
-							}}
-						/>
 					</nav>
 				</div>
 			</header>

@@ -52,8 +52,8 @@ const links = [
 		),
 	},
 	{
-		label: 'Story',
-		href: '/story',
+		label: 'Search',
+		href: '/search',
 		icon: (
 			<svg
 				viewBox='0 0 15 15'

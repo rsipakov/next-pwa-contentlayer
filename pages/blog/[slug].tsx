@@ -1,6 +1,6 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { getTweets } from 'lib/twitter';
-import components from 'components/MDXComponents';
+import MDXcomponents from 'components/MDXComponents';
 import BlogLayout from 'layouts/blog';
 import Tweet from 'components/Tweet';
 import { allBlogs } from '.contentlayer/data';
@@ -18,7 +18,7 @@ export default function Post({ post, tweets }: { post: Blog; tweets: any[] }) {
 			<Component
 				components={
 					{
-						...components,
+						...MDXcomponents,
 						StaticTweet
 					} as any
 				}

@@ -2,11 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	@apply p-safe min-h-screen text-zinc-900 bg-zinc-50 dark:text-zinc-50 dark:bg-zinc-900 antialiased select-none;
+:root {
+	/* #region  === Primary Color "zinc" === */
+	/* https://github.com/adamwathan/tailwind-css-variable-text-opacity-demo */
+	--tw-clr-primary-50: 250, 250, 250;
+	--tw-clr-primary-100: 245, 245, 245;
+	--tw-clr-primary-200: 229, 229, 229;
+	--tw-clr-primary-300: 212, 212, 212;
+	--tw-clr-primary-400: 163, 163, 163;
+	--tw-clr-primary-500: 115, 115, 115;
+	--tw-clr-primary-600: 82, 82, 82;
+	--tw-clr-primary-700: 64, 64, 64;
+	--tw-clr-primary-800: 38, 38, 38;
+	--tw-clr-primary-900: 23, 23, 23;
+	--clr-primary-50: rgb(var(--tw-clr-primary-50)); /* #fafafa */
+	--clr-primary-100: rgb(var(--tw-clr-primary-100)); /* #f5f5f5 */
+	--clr-primary-200: rgb(var(--tw-clr-primary-200)); /* #e5e5e5 */
+	--clr-primary-300: rgb(var(--tw-clr-primary-300)); /* #d4d4d4 */
+	--clr-primary-400: rgb(var(--tw-clr-primary-400)); /* #a3a3a3 */
+	--clr-primary-500: rgb(var(--tw-clr-primary-500)); /* #737373 */
+	--clr-primary-600: rgb(var(--tw-clr-primary-600)); /* #525252 */
+	--clr-primary-700: rgb(var(--tw-clr-primary-700)); /* #404040 */
+	--clr-primary-800: rgb(var(--tw-clr-primary-800)); /* #262626 */
+	--clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #171717 */
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 100 700;
+	font-display: swap;
+	src: url(/fonts/ibm-plex-sans.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-style: italic;
+	font-weight: 100 700;
+	font-display: swap;
+	src: url(/fonts/ibm-plex-sans-italic.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+::selection {
+	background-color: rgb(3 105 161);
+	color: #fefefe;
+}
+
+html {
+	min-width: 360px;
+	scroll-behavior: smooth;
+}
+
+body,
+.body {
+	@apply p-safe min-h-screen antialiased font-sans font-light bg-primary-50 dark:bg-primary-800 text-primary-700 dark:text-primary-200;
 
 	/* PWA enhancements */
 	-webkit-overflow-scrolling: touch;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 }
+
+/* #region  === Default Typography === */
+h1,
+.h1 {
+	@apply font-sans font-bold text-2xl md:text-4xl text-primary-600 dark:text-primary-200;
+}
+
+h2,
+.h2 {
+	@apply font-sans font-bold text-xl md:text-3xl text-primary-600 dark:text-primary-200;
+}
+
+h3,
+.h3 {
+	@apply font-sans font-bold text-lg md:text-2xl text-primary-600 dark:text-primary-200;
+}
+
+h4,
+.h4 {
+	@apply font-sans font-medium text-base md:text-lg text-primary-600 dark:text-primary-200;
+}
+/* #endregion */

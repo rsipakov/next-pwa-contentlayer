@@ -11,7 +11,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Tag from '@/components/Tag'
 import path from 'path'
 import kebabCase from '@/lib/kebabCase'
-import Link from '@/components/Link'
+import CustomLink from '@/components/CustomLink'
 import siteMetaData from '@/data/siteMetaData'
 import { PageSeo } from '@/components/Seo'
 import { useRouter } from 'next/router'
@@ -41,12 +41,12 @@ export default function IndexBlog({
 				availableLocales={undefined}
 			/>
 			<Section>
-				<div className='flex flex-col items-start justify-center max-w-2xl mx-auto mb-16'>
+				<div className='flex flex-col items-start justify-center max-w-prose mx-auto mb-16'>
 					{/* #region === Page's introduction with search panel === */}
-					<h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
+					<h1>
 						{t('blog.title')}
 					</h1>
-					<p className='mb-4 text-zinc-600 dark:text-zinc-400'>
+					<p className='my-6'>
 						{t('blog.intro1')}{' '}<span className='font-bold'>{`${posts.length}`}</span>{' '}{t('blog.intro2')}
 					</p>
 					<div className='relative w-full mb-4'>
@@ -55,10 +55,10 @@ export default function IndexBlog({
 							type='text'
 							onChange={(e) => setSearchValue(e.target.value)}
 							placeholder={t('blog.searchArticles')}
-							className='block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100'
+							className='block w-full px-4 py-2 text-primary-700 bg-primary-50 border border-primary-200 rounded-md dark:border-primary-900 focus:ring-info-500 focus:border-info-500 dark:bg-primary-600 dark:text-primary-200'
 						/>
 						<svg
-							className='absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300'
+							className='absolute w-5 h-5 text-primary-400 right-3 top-3 dark:text-primary-300'
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
 							viewBox='0 0 24 24'
@@ -73,7 +73,7 @@ export default function IndexBlog({
 						</svg>
 					</div>
 					{/* #endregion */}
-					<h3 className='mt-4 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
+					<h3 className='mt-4 mb-4 tracking-tight'>
 						{t('blog.allTags')}
 					</h3>
 
@@ -84,23 +84,23 @@ export default function IndexBlog({
 							return (
 								<div key={ts} className="mt-2 mb-2 mr-5">
 									<Tag text={ts} />
-									<Link
+									<CustomLink
 										href={`/tags/${kebabCase(t)}`}
-										className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
+										className="-ml-2 uppercase text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-200"
 									>
 										{` (${tags[ts]})`}
-									</Link >
+									</CustomLink >
 								</div>
 							)
 						})}
 					</div>
 					{/* #endregion */}
 
-					<h3 className='mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
+					<h2 className='mt-8 mb-4 tracking-tight'>
 						{t('blog.allPosts')}
-					</h3>
+					</h2>
 					{!filteredBlogPosts.length && (
-						<p className='mb-4 text-gray-600 dark:text-gray-400'>
+						<p className='mb-4'>
 							{t('blog.noFound')}
 						</p>
 					)}
