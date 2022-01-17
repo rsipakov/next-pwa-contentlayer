@@ -14,7 +14,7 @@ export default function LocaleSelect() {
 			onChange={changeLanguage}
 			defaultValue={locale}
 			style={{ textAlignLast: 'center' }}
-			className='text-sm text-zinc-900 dark:text-zinc-50 bg-zinc-200 dark:bg-zinc-400 rounded-lg border border-zinc-300 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500'
+			className='text-sm text-primary-900 dark:text-primary-50 bg-primary-200 dark:bg-primary-600 rounded-lg border border-primary-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500'
 		>
 			{locales.map((e) => (
 				<option value={e} key={e}>

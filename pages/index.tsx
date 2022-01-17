@@ -6,44 +6,35 @@ import { PageSeo } from '@/components/Seo'
 import siteMetadata from '@/data/siteMetaData'
 import { useRouter } from 'next/router'
 
-export default function IndexPage( { availableLocales }) {
+export default function IndexPage({ availableLocales }) {
 	const { locale } = useRouter()
-	const { t } = useTranslation('common');
+	const { t } = useTranslation('common')
 
 	return (
-	<Page>
-		<PageSeo
-			title={siteMetadata.siteName[locale]}
-			description={siteMetadata.siteDescription[locale]}
-			availableLocales={availableLocales}
-		/>
-		<Section>
-			<h2 className='text-xl font-semibold text-zinc-800 dark:text-zinc-200'>
-				{t('index.title')}
-			</h2>
-			<div className='mt-2'>
-				<p className='text-zinc-600 dark:text-zinc-400'>
-					You love rice, and so does the rest of the world. In the crop year
-					2008/2009, the milled rice production volume amounted to over{' '}
-					<span className='font-medium text-zinc-900 dark:text-zinc-50'>
-						448 million tons
-					</span>{' '}
-					worldwide.
-				</p>
-
-				<br />
-
-				<p className='text-sm text-zinc-600 dark:text-zinc-400'>
-					<a
-						href='https://github.com/mvllow/next-pwa-template'
-						className='underline'
-					>
-						Source
-					</a>
-				</p>
-			</div>
-		</Section>
-	</Page>
+		<Page>
+			<PageSeo
+				title={siteMetadata.siteName[locale]}
+				description={siteMetadata.siteDescription[locale]}
+				availableLocales={availableLocales}
+			/>
+			<Section>
+				<div className='flex flex-col items-start justify-center max-w-prose mx-auto mb-16'>
+				<h2>
+					{t('index.title')}
+				</h2>
+				<div className='mt-6 prose prose-lg dark:prose-dark'>
+					<p>
+						Sem sed ullamcorper parturient magnis suspendisse sodales a quisque ad sodales faucibus vel mi dictum id eu
+						parturient a. Aenean a himenaeos amet integer etiam rhoncus urna duis arcu venenatis condimentum risus
+						facilisis ut parturient. Curabitur dui mi cras adipiscing netus mus morbi felis diam vestibulum augue
+						viverra curae condimentum maecenas parturient lectus vehicula a ullamcorper risus nisi.
+					</p>
+					<h2>This is h2</h2>
+					<p>Vestibulum a parturient facilisi quam parturient eget quis magna vulputate consectetur suscipit quam vestibulum vivamus dis aptent.</p>
+				</div>
+				</div>
+			</Section>
+		</Page>
 	)
 }
 
@@ -53,6 +44,6 @@ export async function getStaticProps({ locale, locales }) {
 			...(await serverSideTranslations(locale, ['common'])),
 			// Will be passed to the page component as props
 			availableLocales: locales
-		},
-	};
+		}
+	}
 }
