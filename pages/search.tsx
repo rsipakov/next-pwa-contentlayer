@@ -4,9 +4,12 @@ import siteMetadata from '@/data/siteMetaData'
 import { PageSeo } from '@/components/Seo'
 import { useRouter } from 'next/router'
 import CustomLinkSvg from '@/components/CustomLinkSvg'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 export default function StoryPage({ availableLocales }) {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	return (
 		<Page>
 			<PageSeo
@@ -16,7 +19,7 @@ export default function StoryPage({ availableLocales }) {
 			/>
 			<Section>
 				<div className='flex flex-col items-start justify-center max-w-prose mx-auto mb-16'>
-				<h1>Search</h1>
+				<h1>{t('search.title')}</h1>
 				<div className='mt-6'>
 					<p className='prose prose-lg dark:prose-dark'>
 						&quot;Ante a auctor consectetur consectetur a adipiscing cum est parturient scelerisque egestas auctor a
@@ -34,4 +37,14 @@ export default function StoryPage({ availableLocales }) {
 			</Section>
 		</Page>
 	)
+}
+
+export async function getStaticProps({ locale, locales }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+			// Will be passed to the page component as props
+			availableLocales: locales
+		}
+	}
 }

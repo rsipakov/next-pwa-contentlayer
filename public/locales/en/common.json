@@ -2,6 +2,9 @@
   "index": {
 	"title": "I have a Red Cap"
   },
+  "search": {
+	"title": "Search"
+  },
   "blog": {
 	"title": "Blog",
 	"allTags": "All Tags",
