@@ -23,9 +23,8 @@ const Appbar = () => {
 							<h1 className='font-medium'>{siteMetaData.siteName[locale]}</h1>
 						</a>
 					</Link>
-
 					<nav className='space-x-6 flex items-center'>
-						<div className='sm:block'>
+						<div className='hidden sm:block'>
 							<div className='space-x-6 flex items-center'>
 								{links.map(({ label, href }) => (
 									<Link key={label} href={href}>
