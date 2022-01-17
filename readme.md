@@ -28,9 +28,17 @@ PROJECT IN PROGRESS
 - [x] [PWA Plugin for Next.js](https://github.com/shadowwalker/next-pwa)
 - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
 - [x] [Contentlayer](https://github.com/contentlayerdev/contentlayer)
-
 - [x] [Security Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
-- [ ] SEO // In Progress
+
+### in progress
+
+- [ ] SEO
+- [ ] Tag's page
+- [ ] Custom tailwind.config.js
+
+### future
+
+- [ ] Article's views
 - [ ] [Static Tweets with MDX](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/)
 - [ ] [Framer Motion](https://www.framer.com/docs/animation/)
 
