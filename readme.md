@@ -29,6 +29,7 @@ PROJECT IN PROGRESS
 - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
 - [x] [Contentlayer](https://github.com/contentlayerdev/contentlayer)
 - [x] [Security Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+- [x] [Reading Time](https://www.npmjs.com/package/reading-time)
 
 ### in progress
 

@@ -26,31 +26,41 @@ module.exports = {
 				sans: ['IBM Plex Sans', ...fontFamily.sans]
 			},
 			colors: {
-				primary: colors.neutral,
+				primary: {
+					50: withOpacity('--tw-color-blue-vivid-050'),
+					100: withOpacity('--tw-color-blue-vivid-100'),
+					700: withOpacity('--tw-color-blue-vivid-700'),
+					900: withOpacity('--tw-color-blue-vivid-900'),
+				},
+				neutrals: {
+					50: withOpacity('--tw-color-cool-grey-050'),
+					100: withOpacity('--tw-color-cool-grey-100'),
+					700: withOpacity('--tw-color-cool-grey-700'),
+					900: withOpacity('--tw-color-cool-grey-900'),
+				},
+				supporting: {
+					50: withOpacity('--tw-color-cyan-vivid-050'),
+					100: withOpacity('--tw-color-cyan-vivid-100'),
+					700: withOpacity('--tw-color-cyan-vivid-700'),
+					900: withOpacity('--tw-color-cyan-vivid-900'),
+				},
 				info: colors.indigo
 			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
-						color: theme('colors.primary.700'),
+						color: theme('colors.neutrals.900'),
 						a: {
-							color: theme("colors.indigo.500"),
+							color: theme("colors.primary.700"),
 							"&:hover": {
-								color: theme("colors.indigo.700"),
+								color: theme("colors.primary.100"),
 							},
 							code: { color: theme("colors.primary.400") },
 						},
 						'h1,h2,h3,h4': {
-							color: theme('colors.primary.600'),
+							color: theme('colors.neutrals.900/80'),
+							letterSpacing: theme('letterSpacing.tight'),
 							'scroll-margin-top': spacing[32]
-						},
-						'h1,h2,h3': {
-							letterSpacing: theme('letterSpacing.tight'),
-							fontWeight: '700',
-						},
-						'h4': {
-							letterSpacing: theme('letterSpacing.tight'),
-							fontWeight: '500',
 						},
 						thead: {
 							borderBottomColor: theme('colors.gray.200')
@@ -62,11 +72,11 @@ module.exports = {
 				},
 				dark: {
 					css: {
-						color: theme('colors.primary.200'),
+						color: theme('colors.neutrals.100'),
 						a: {
-							color: theme("colors.indigo.400"),
+							color: theme("colors.primary.100"),
 							"&:hover": {
-								color: theme("colors.indigo.200"),
+								color: theme("colors.primary.100"),
 							},
 							code: { color: theme("colors.primary.400") },
 						},
@@ -75,16 +85,9 @@ module.exports = {
 							color: theme('colors.gray.300')
 						},
 						'h1,h2,h3,h4': {
-							color: theme('colors.primary.200'),
+							color: theme('colors.neutrals.100/80'),
+							letterSpacing: theme('letterSpacing.tight'),
 							'scroll-margin-top': spacing[32]
-						},
-						'h1,h2,h3': {
-							letterSpacing: theme('letterSpacing.tight'),
-							fontWeight: '700',
-						},
-						'h4': {
-							letterSpacing: theme('letterSpacing.tight'),
-							fontWeight: '500',
 						},
 						hr: { borderColor: theme('colors.gray.700') },
 						ol: {
@@ -117,6 +120,7 @@ module.exports = {
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
-		require('tailwindcss-safe-area')
+		require('tailwindcss-safe-area'),
+		require('@tailwindcss/forms'),
 	],
 }
