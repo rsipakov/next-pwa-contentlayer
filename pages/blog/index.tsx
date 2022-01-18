@@ -55,10 +55,10 @@ export default function IndexBlog({
 							type='text'
 							onChange={(e) => setSearchValue(e.target.value)}
 							placeholder={t('blog.searchArticles')}
-							className='block w-full px-4 py-2 text-primary-700 bg-primary-50 border border-primary-200 rounded-md dark:border-primary-900 focus:ring-info-500 focus:border-info-500 dark:bg-primary-600 dark:text-primary-200'
+							className='text-neutrals-900 dark:text-neutrals-100 bg-neutrals-100/50 dark:bg-neutrals-700 border-neutrals-700/50 dark:border-neutrals-100/50 block w-full px-4 py-2 border rounded-md focus:ring-primary-700 focus:border-primary-700 dark:focus:ring-primary-700 dark:focus:border-primary-100'
 						/>
 						<svg
-							className='absolute w-5 h-5 text-primary-400 right-3 top-3 dark:text-primary-300'
+							className='absolute w-5 h-5 right-3 top-3 text-neutrals-900 dark:text-neutrals-100'
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
 							viewBox='0 0 24 24'
@@ -86,7 +86,7 @@ export default function IndexBlog({
 									<Tag text={ts} />
 									<CustomLink
 										href={`/tags/${kebabCase(t)}`}
-										className="-ml-2 uppercase text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-200"
+										className="-ml-2 uppercase text-primary-700 hover:text-primary-100 dark:text-primary-100/70 dark:hover:text-primary-100"
 									>
 										{` (${tags[ts]})`}
 									</CustomLink >

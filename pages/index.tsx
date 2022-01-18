@@ -19,9 +19,9 @@ export default function IndexPage({ availableLocales }) {
 			/>
 			<Section>
 				<div className='flex flex-col items-start justify-center max-w-prose mx-auto mb-16'>
-				<h2>
+				<h1>
 					{t('index.title')}
-				</h2>
+				</h1>
 				<div className='mt-6 prose prose-lg dark:prose-dark'>
 					<p>
 						Sem sed ullamcorper parturient magnis suspendisse sodales a quisque ad sodales faucibus vel mi dictum id eu
@@ -29,7 +29,6 @@ export default function IndexPage({ availableLocales }) {
 						facilisis ut parturient. Curabitur dui mi cras adipiscing netus mus morbi felis diam vestibulum augue
 						viverra curae condimentum maecenas parturient lectus vehicula a ullamcorper risus nisi.
 					</p>
-					<h2>This is h2</h2>
 					<p>Vestibulum a parturient facilisi quam parturient eget quis magna vulputate consectetur suscipit quam vestibulum vivamus dis aptent.</p>
 				</div>
 				</div>

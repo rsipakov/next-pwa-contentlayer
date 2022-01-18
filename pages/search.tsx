@@ -28,7 +28,7 @@ export default function StoryPage({ availableLocales }) {
 					<div className='mt-6'>
 						<CustomLinkSvg
 							href='https://google.com'
-							className='text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-200'>
+							className='text-primary-700 hover:text-primary-100 dark:text-primary-100/70 dark:hover:text-primary-100'>
 							Go to Google
 						</CustomLinkSvg>
 					</div>

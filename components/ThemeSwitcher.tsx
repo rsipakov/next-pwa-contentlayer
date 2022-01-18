@@ -13,7 +13,7 @@ export default function ThemeSwitcher() {
 				aria-label="Toggle Dark Mode"
 				title="Theme toggle"
 				type="button"
-				className="w-7 h-7 bg-primary-200 rounded-lg dark:bg-primary-600 flex items-center justify-center hover:ring-2 ring-primary-400 transition-all"
+				className="w-7 h-7 bg-neutrals-100 rounded-lg dark:bg-neutrals-900/60 flex items-center justify-center hover:ring-2 ring-neutrals-700 transition-all"
 				onClick={() =>
 					setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
 				}
@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
 						viewBox="0 0 24 24"
 						fill="none"
 						stroke="currentColor"
-						className="w-4 h-4 text-primary-900 dark:text-primary-50"
+						className="w-4 h-4 text-neutrals-900 dark:text-neutrals-100"
 					>
 						{resolvedTheme === 'dark' ? (
 							<path

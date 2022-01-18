@@ -16,7 +16,7 @@ const Appbar = () => {
 
 	return (
 		<div className='pt-safe w-full bg-zinc-900 fixed top-0 left-0 z-20'>
-			<header className='px-safe bg-primary-100 border-b dark:bg-primary-900 dark:border-primary-800'>
+			<header className='px-safe bg-neutrals-100 border-b dark:bg-neutrals-900 dark:border-neutrals-700'>
 				<div className='mx-auto px-6 max-w-screen-lg h-20 flex items-center justify-between'>
 					<Link href='/'>
 						<a>
@@ -31,8 +31,8 @@ const Appbar = () => {
 										<a
 											className={`text-sm ${
 												router.pathname === href
-													? 'text-indigo-500 dark:text-indigo-400'
-													: 'text-primary-600 hover:text-primary-900 dark:text-primary-400 dark:hover:text-primary-50'
+													? 'text-primary-700 dark:text-primary-100 font-medium'
+													: 'text-neutrals-900 dark:text-neutrals-100 hover:text-neutrals-900/50 dark:hover:text-neutrals-100/50'
 											}`}
 										>
 											{label}

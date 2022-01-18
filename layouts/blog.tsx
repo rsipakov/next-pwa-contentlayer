@@ -24,31 +24,31 @@ export default function BlogLayout({
 			/>
 			<Section>
 				<article className='flex flex-col items-start justify-center max-w-prose mx-auto mb-16'>
-					<div className='prose dark:prose-dark'>
-						<h1>
+					<div>
+						<h1 className='mb-10'>
 							{post.title}
 						</h1>
-						<div className='flex flex-col items-start justify-between w-full md:flex-row md:items-center'>
+						<div className='flex flex-col items-start justify-between w-full mb-10 md:flex-row md:items-center'>
 							<div className='flex items-center'>
 								<Image
-									alt='Red Cap'
+									alt='Big Cap'
 									height={24}
 									width={24}
 									src='/static/images/TwilioHero.png'
 									className='rounded-full'
 								/>
-								<p className='ml-2 text-sm text-gray-700 dark:text-gray-300'>
-									{'Red Cap / '}
+								<p className='ml-2 text-sm text-neutrals-700 dark:text-neutrals-100/60'>
+									{'Big Cap / '}
 									{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
 								</p>
 							</div>
-							<p className='mt-2 text-sm text-gray-600 dark:text-gray-400 min-w-32 md:mt-0'>
+							<p className='mt-2 text-sm min-w-32 md:mt-0 text-neutrals-700 dark:text-neutrals-100/60'>
 								{post.readingTime.text}
 								{` • `}
 								<ViewCounter slug={post.slug} />
 							</p>
 						</div>
-						<div className='w-full max-w-none'>
+						<div className='w-full mt-4 prose dark:prose-dark max-w-none'>
 							{children}
 						</div>
 					</div>
