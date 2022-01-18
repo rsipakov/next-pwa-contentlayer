@@ -58,7 +58,7 @@ module.exports = {
 							code: { color: theme("colors.primary.400") },
 						},
 						'h1,h2,h3,h4': {
-							color: theme('colors.neutrals.900/80'),
+							color: theme('colors.neutrals.900'),
 							letterSpacing: theme('letterSpacing.tight'),
 							'scroll-margin-top': spacing[32]
 						},
@@ -85,7 +85,7 @@ module.exports = {
 							color: theme('colors.gray.300')
 						},
 						'h1,h2,h3,h4': {
-							color: theme('colors.neutrals.100/80'),
+							color: theme('colors.neutrals.100'),
 							letterSpacing: theme('letterSpacing.tight'),
 							'scroll-margin-top': spacing[32]
 						},
