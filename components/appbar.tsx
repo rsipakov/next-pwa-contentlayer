@@ -6,7 +6,7 @@ import siteMetaData from '@/data/siteMetaData'
 
 const links = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Search', href: '/search' },
+	{ label: 'To Do', href: '/to-do' },
 	{ label: 'Blog', href: '/blog' },
 ]
 

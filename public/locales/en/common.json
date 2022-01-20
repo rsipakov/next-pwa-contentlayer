@@ -2,8 +2,9 @@
   "index": {
 	"title": "I have a Big Cap"
   },
-  "search": {
-	"title": "Search"
+  "todos": {
+	"title": "My To Do list from JSON Placeholder",
+	"description": "Free fake API for testing and prototyping. Powered by"
   },
   "blog": {
 	"title": "Blog",
