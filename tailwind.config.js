@@ -1,13 +1,13 @@
 const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors')
 
-function withOpacity(variableName) {
+function withOpacityValue(variable) {
 	return ({ opacityValue }) => {
-		if (opacityValue !== undefined) {
-			return `rgba(var(${variableName}), ${opacityValue})`;
+		if (opacityValue === undefined) {
+			return `rgb(var(${variable}))`
 		}
-		return `rgb(var(${variableName}))`;
-	};
+		return `rgb(var(${variable}) / ${opacityValue})`
+	}
 }
 
 module.exports = {
@@ -17,6 +17,11 @@ module.exports = {
 		'./layouts/**/*.tsx'
 	],
 	darkMode: 'class',
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('tailwindcss-safe-area'),
+		require('@tailwindcss/forms'),
+	],
 	theme: {
 		extend: {
 			spacing: {
@@ -27,22 +32,22 @@ module.exports = {
 			},
 			colors: {
 				primary: {
-					50: withOpacity('--tw-color-blue-vivid-050'),
-					100: withOpacity('--tw-color-blue-vivid-100'),
-					700: withOpacity('--tw-color-blue-vivid-700'),
-					900: withOpacity('--tw-color-blue-vivid-900'),
+					50: withOpacityValue('--tw-color-blue-vivid-050'),
+					100: withOpacityValue('--tw-color-blue-vivid-100'),
+					700: withOpacityValue('--tw-color-blue-vivid-700'),
+					900: withOpacityValue('--tw-color-blue-vivid-900'),
 				},
 				neutrals: {
-					50: withOpacity('--tw-color-cool-grey-050'),
-					100: withOpacity('--tw-color-cool-grey-100'),
-					700: withOpacity('--tw-color-cool-grey-700'),
-					900: withOpacity('--tw-color-cool-grey-900'),
+					50: withOpacityValue('--tw-color-cool-grey-050'),
+					100: withOpacityValue('--tw-color-cool-grey-100'),
+					700: withOpacityValue('--tw-color-cool-grey-700'),
+					900: withOpacityValue('--tw-color-cool-grey-900'),
 				},
 				supporting: {
-					50: withOpacity('--tw-color-cyan-vivid-050'),
-					100: withOpacity('--tw-color-cyan-vivid-100'),
-					700: withOpacity('--tw-color-cyan-vivid-700'),
-					900: withOpacity('--tw-color-cyan-vivid-900'),
+					50: withOpacityValue('--tw-color-cyan-vivid-050'),
+					100: withOpacityValue('--tw-color-cyan-vivid-100'),
+					700: withOpacityValue('--tw-color-cyan-vivid-700'),
+					900: withOpacityValue('--tw-color-cyan-vivid-900'),
 				},
 				info: colors.indigo
 			},
@@ -59,7 +64,7 @@ module.exports = {
 						},
 						'h1,h2,h3,h4': {
 							color: theme('colors.neutrals.900'),
-							letterSpacing: theme('letterSpacing.tight'),
+							letterSpacing: theme('letterSpacing.normal'),
 							'scroll-margin-top': spacing[32]
 						},
 						thead: {
@@ -86,7 +91,7 @@ module.exports = {
 						},
 						'h1,h2,h3,h4': {
 							color: theme('colors.neutrals.100'),
-							letterSpacing: theme('letterSpacing.tight'),
+							letterSpacing: theme('letterSpacing.normal'),
 							'scroll-margin-top': spacing[32]
 						},
 						hr: { borderColor: theme('colors.gray.700') },
@@ -118,9 +123,4 @@ module.exports = {
 	variants: {
 		typography: ['dark']
 	},
-	plugins: [
-		require('@tailwindcss/typography'),
-		require('tailwindcss-safe-area'),
-		require('@tailwindcss/forms'),
-	],
 }
