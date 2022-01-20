@@ -60,11 +60,13 @@ export default function TodoList({availableLocales}) {
 					</CustomLinkSvg>
 				</div>
 			</div>
-			<ul className="prose mt-8">
+			<div className='w-full mt-6 prose dark:prose-dark max-w-none'>
+			<ul>
 				{todos.map(todo => (
 					<li key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>{todo.title}</li>
 				))}
 			</ul>
+			</div>
 		</div>
 			</Section>
 		</Page>
