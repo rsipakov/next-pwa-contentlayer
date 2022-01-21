@@ -13,6 +13,10 @@ PROJECT IN PROGRESS
 </a>
 </p>
 
+## Lighthouse Report
+
+See on [DebugBear](https://www.debugbear.com/project/27638?r=app&share=IVHb1tA4muLU7I3guGs9F4Bux). I would appreciate it if you could give me tips on how to improve it.
+
 ## Credit:
 - [Next PWA Template](https://github.com/mvllow/next-pwa-template)
 - [leerob.io](https://github.com/leerob/leerob.io)
@@ -30,6 +34,7 @@ PROJECT IN PROGRESS
 - [x] [Contentlayer](https://github.com/contentlayerdev/contentlayer)
 - [x] [Security Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 - [x] [Reading Time](https://www.npmjs.com/package/reading-time)
+- [x] [Webpack Bundle Analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
 
 ### in progress
 
@@ -39,9 +44,7 @@ PROJECT IN PROGRESS
 
 ### future
 
+- [ ] Sitemap
 - [ ] Article's views
 - [ ] [Static Tweets with MDX](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/)
 - [ ] [Framer Motion](https://www.framer.com/docs/animation/)
-
-## Lighthouse Report
-<img src="https://res.cloudinary.com/missioniz-cloud/image/upload/v1642059927/web%20development/nextjs-pwa-01132022_sv9e9b.png" width="360"/>
