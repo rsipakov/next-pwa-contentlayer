@@ -2,7 +2,6 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 const { i18n } = require('./next-i18next.config')
 const { withContentlayer } = require('next-contentlayer')
-
 const withPlugins = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
 	enabled: process.env.ANALYZE === 'true'
@@ -64,7 +63,6 @@ const securityHeaders = [
 
 
 module.exports = withPlugins([
-	[withBundleAnalyzer],
 	[withContentlayer({})],
 	withPWA({
 		images: {
@@ -114,5 +112,6 @@ module.exports = withPlugins([
 			dest: 'public',
 			runtimeCaching
 		},
-	})
+	}),
+		[withBundleAnalyzer] // work if adding bundle analyzer plugin at the end
 ])
