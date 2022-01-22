@@ -52,6 +52,7 @@ const Blog = defineDocumentType(() => ({
 		summary: { type: 'string', required: true },
 		image: { type: 'string', required: true },
 		tags: { type: 'list', of: { type: 'string' }},
+		draft: { type: 'boolean' },
 	},
 	computedFields,
 }))

@@ -29,9 +29,8 @@ export default function IndexBlog({
 
 	const { t } = useTranslation('common')
 
-	const sortedTags = Object.keys(tags).sort((a, b) =>
-		tags[b] - tags[a]
-	)
+	const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
+
 	const { locale } = useRouter()
 	return (
 		<Page>
@@ -77,6 +76,7 @@ export default function IndexBlog({
 						{t('blog.allTags')}
 					</h3>
 
+
 					{/* #region //*=== Display getBlogTags (solution based on 'tailwind-nextjs-starter-blog') === */}
 					<div className="flex flex-wrap">
 						{Object.keys(tags).length === 0 && 'No tags found.'}
@@ -113,26 +113,32 @@ export default function IndexBlog({
 	)
 }
 
-//#region //* Get tags of each post === (solution based on 'tailwind-nextjs-starter-blog') ===
-export function getBlogTags(data = allBlogs) {
 
-	const values = data.flatMap((blog) => blog.tags)
-	let tagCount = {}
+// #region === Get All Tags ===
+// TODO: refactor into contentlayer once compute over all docs is enabled
+export async function getAllTags() {
+	const tagCount: Record<string, number> = {}
 	// Iterate through each post, putting all found tags into `tags`
-	values.forEach((tag) => {
-			const formattedTag = kebabCase(tag)
-			if (formattedTag in tagCount) {
-				tagCount[formattedTag] += 1
-			} else {
-				tagCount[formattedTag] = 1
-			}
+	allBlogs.forEach((file) => {
+
+		if (file.tags && file.draft !== true) {
+			file.tags.forEach((tag) => {
+				const formattedTag = kebabCase(tag)
+				if (formattedTag in tagCount) {
+					tagCount[formattedTag] += 1
+				} else {
+					tagCount[formattedTag] = 1
+				}
+			})
 		}
-	)
+
+	})
+
 	return tagCount
 }
-//#endregion
+// #end region
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ defaultLocale, locale, locales }) {
 	const posts = allBlogs
 		.map((post) =>
 			pick(post, ['slug', 'title', 'summary', 'publishedAt', 'locale', 'tags'])
@@ -143,7 +149,8 @@ export async function getStaticProps({ locale }) {
 				Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
 		)
 	// Accumulate tags
-	const tags = getBlogTags();
+	const tags = await getAllTags()
+
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
