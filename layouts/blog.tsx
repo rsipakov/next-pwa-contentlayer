@@ -48,7 +48,7 @@ export default function BlogLayout({
 								<ViewCounter slug={post.slug} />
 							</p>
 						</div>
-						<div className='w-full mt-4 prose dark:prose-dark max-w-none'>
+						<div className='w-full max-w-none mt-4 prose dark:prose-dark prose-a:hover:text-[#BAE3FF]'>
 							{children}
 						</div>
 					</div>
