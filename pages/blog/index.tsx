@@ -1,6 +1,5 @@
 import Page from '@/components/page'
 import Section from '@/components/section'
-
 import { useState } from 'react'
 import BlogPost from '@/components/BlogPost'
 import { InferGetStaticPropsType } from 'next'
@@ -15,7 +14,7 @@ import CustomLink from '@/components/CustomLink'
 import siteMetaData from '@/data/siteMetaData'
 import { PageSeo } from '@/components/Seo'
 import { useRouter } from 'next/router'
-
+import type { Blog } from '.contentlayer/types'
 
 export default function IndexBlog({
 																		posts,
@@ -76,7 +75,6 @@ export default function IndexBlog({
 						{t('blog.allTags')}
 					</h3>
 
-
 					{/* #region //*=== Display getBlogTags (solution based on 'tailwind-nextjs-starter-blog') === */}
 					<div className="flex flex-wrap">
 						{Object.keys(tags).length === 0 && 'No tags found.'}
@@ -113,14 +111,12 @@ export default function IndexBlog({
 	)
 }
 
-
 // #region === Get All Tags ===
 // TODO: refactor into contentlayer once compute over all docs is enabled
-export async function getAllTags() {
+export async function getAllTags(allBlogs: Blog[]) {
 	const tagCount: Record<string, number> = {}
 	// Iterate through each post, putting all found tags into `tags`
 	allBlogs.forEach((file) => {
-
 		if (file.tags && file.draft !== true) {
 			file.tags.forEach((tag) => {
 				const formattedTag = kebabCase(tag)
@@ -131,14 +127,12 @@ export async function getAllTags() {
 				}
 			})
 		}
-
 	})
-
 	return tagCount
 }
 // #end region
 
-export async function getStaticProps({ defaultLocale, locale, locales }) {
+export async function getStaticProps({ locale }) {
 	const posts = allBlogs
 		.map((post) =>
 			pick(post, ['slug', 'title', 'summary', 'publishedAt', 'locale', 'tags'])
@@ -149,7 +143,7 @@ export async function getStaticProps({ defaultLocale, locale, locales }) {
 				Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
 		)
 	// Accumulate tags
-	const tags = await getAllTags()
+	const tags = await getAllTags(posts)
 
 	return {
 		props: {
