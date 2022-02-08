@@ -112,8 +112,13 @@ export default function IndexBlog({
 }
 
 // #region === Get All Tags ===
+type PickedPost = Pick<
+	Blog,
+	'slug' | 'title' | 'summary' | 'publishedAt' | 'locale' | 'tags' | 'draft'
+	>
+
 // TODO: refactor into contentlayer once compute over all docs is enabled
-export async function getAllTags(allBlogs: Blog[]) {
+export async function getAllTags(allBlogs: PickedPost[]) {
 	const tagCount: Record<string, number> = {}
 	// Iterate through each post, putting all found tags into `tags`
 	allBlogs.forEach((file) => {
@@ -135,7 +140,15 @@ export async function getAllTags(allBlogs: Blog[]) {
 export async function getStaticProps({ locale }) {
 	const posts = allBlogs
 		.map((post) =>
-			pick(post, ['slug', 'title', 'summary', 'publishedAt', 'locale', 'tags'])
+			pick(post, [
+				'slug',
+				'title',
+				'summary',
+				'publishedAt',
+				'locale',
+				'tags',
+				'draft'
+			])
 		)
 		.filter((post) => post.locale === locale)
 		.sort(
