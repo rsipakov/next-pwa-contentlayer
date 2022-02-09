@@ -1,6 +1,5 @@
 import Page from '@/components/page'
 import Section from '@/components/section'
-
 import { useState } from 'react'
 import BlogPost from '@/components/BlogPost'
 import { InferGetStaticPropsType } from 'next'
@@ -15,7 +14,7 @@ import CustomLink from '@/components/CustomLink'
 import siteMetaData from '@/data/siteMetaData'
 import { PageSeo } from '@/components/Seo'
 import { useRouter } from 'next/router'
-
+import type { Blog } from '.contentlayer/types'
 
 export default function IndexBlog({
 																		posts,
@@ -29,9 +28,8 @@ export default function IndexBlog({
 
 	const { t } = useTranslation('common')
 
-	const sortedTags = Object.keys(tags).sort((a, b) =>
-		tags[b] - tags[a]
-	)
+	const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
+
 	const { locale } = useRouter()
 	return (
 		<Page>
@@ -113,29 +111,43 @@ export default function IndexBlog({
 	)
 }
 
-//#region //* Get tags of each post === (solution based on 'tailwind-nextjs-starter-blog') ===
-export function getBlogTags(data = allBlogs) {
-
-	const values = data.flatMap((blog) => blog.tags)
-	let tagCount = {}
+// #region === Get All Tags ===
+type PickedPost = Pick<
+	Blog,
+	'slug' | 'title' | 'summary' | 'publishedAt' | 'locale' | 'tags' | 'draft'
+	>
+// TODO: refactor into contentlayer once compute over all docs is enabled, Follow to https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/contentlayer/pages/tags.tsx
+export async function getAllTags(allBlogs: PickedPost[]) {
+	const tagCount: Record<string, number> = {}
 	// Iterate through each post, putting all found tags into `tags`
-	values.forEach((tag) => {
-			const formattedTag = kebabCase(tag)
-			if (formattedTag in tagCount) {
-				tagCount[formattedTag] += 1
-			} else {
-				tagCount[formattedTag] = 1
-			}
+	allBlogs.forEach((file) => {
+		if (file.tags && file.draft !== true) {
+			file.tags.forEach((tag) => {
+				const formattedTag = kebabCase(tag)
+				if (formattedTag in tagCount) {
+					tagCount[formattedTag] += 1
+				} else {
+					tagCount[formattedTag] = 1
+				}
+			})
 		}
-	)
+	})
 	return tagCount
 }
-//#endregion
+// #end region
 
 export async function getStaticProps({ locale }) {
 	const posts = allBlogs
 		.map((post) =>
-			pick(post, ['slug', 'title', 'summary', 'publishedAt', 'locale', 'tags'])
+			pick(post, [
+				'slug',
+				'title',
+				'summary',
+				'publishedAt',
+				'locale',
+				'tags',
+				'draft'
+			])
 		)
 		.filter((post) => post.locale === locale)
 		.sort(
@@ -143,7 +155,8 @@ export async function getStaticProps({ locale }) {
 				Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
 		)
 	// Accumulate tags
-	const tags = getBlogTags();
+	const tags = await getAllTags(posts)
+
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),

@@ -44,6 +44,7 @@ See on [DebugBear](https://www.debugbear.com/project/27638?r=app&share=IVHb1tA4m
 
 ### future
 
+- [ ] [TypeScript ESLint](https://typescript-eslint.io/docs/linting/)
 - [ ] Sitemap
 - [ ] Article's views
 - [ ] [Static Tweets with MDX](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/)

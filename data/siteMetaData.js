@@ -6,7 +6,8 @@ const siteMetaData = {
 	siteDescription: { en: 'This is a website about Big Cap', ru: 'Это вебсайт о Большой Шапке' },
 	siteUrl: 'https://next-pwa-contentlayer.vercel.app',
 	socialBanner: '',
-	twitterBanner: ''
+	twitterBanner: '',
+	locale: 'en-US',
 }
 
 module.exports = siteMetaData

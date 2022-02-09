@@ -56,10 +56,7 @@ module.exports = {
 					css: {
 						color: theme('colors.neutrals.900'),
 						a: {
-							color: theme("colors.primary.700"),
-							"&:hover": {
-								color: theme("colors.primary.100"),
-							},
+							color: theme("colors.primary.700"),  // use like `prose-a:hover:text-[#BAE3FF]` see more https://github.com/tailwindlabs/tailwindcss-typography/issues/231
 							code: { color: theme("colors.primary.400") },
 						},
 						'h1,h2,h3,h4': {
@@ -79,10 +76,7 @@ module.exports = {
 					css: {
 						color: theme('colors.neutrals.100'),
 						a: {
-							color: theme("colors.primary.100"),
-							"&:hover": {
-								color: theme("colors.primary.100"),
-							},
+							color: theme("colors.primary.100"), // use like `prose-a:hover:text-[#BAE3FF]` see more https://github.com/tailwindlabs/tailwindcss-typography/issues/231
 							code: { color: theme("colors.primary.400") },
 						},
 						blockquote: {
