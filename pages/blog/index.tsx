@@ -116,8 +116,7 @@ type PickedPost = Pick<
 	Blog,
 	'slug' | 'title' | 'summary' | 'publishedAt' | 'locale' | 'tags' | 'draft'
 	>
-
-// TODO: refactor into contentlayer once compute over all docs is enabled
+// TODO: refactor into contentlayer once compute over all docs is enabled, Follow to https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/contentlayer/pages/tags.tsx
 export async function getAllTags(allBlogs: PickedPost[]) {
 	const tagCount: Record<string, number> = {}
 	// Iterate through each post, putting all found tags into `tags`
