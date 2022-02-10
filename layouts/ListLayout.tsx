@@ -1,16 +1,18 @@
 // TODO: Add Pagination.
 // TODO: Check сompatibility Date with formatDate.
 // TODO: Refactor layout
+import Page from '@/components/page'
+import Section from '@/components/section'
 import CustomLink from '@/components/CustomLink'
 import Tag from '@/components/Tag'
 import { useState } from 'react'
 import formatDate from '@/lib/formatDate'
-import type { Blog } from '.contentlayer/types'
+import * as temp from '@/lib/temp'
 
 interface Props {
-  posts: Blog[]
-  title: string
-  initialDisplayPosts?: Blog[]
+	posts: temp.CoreBlog[]
+	title: string
+	initialDisplayPosts?: temp.CoreBlog[]
 }
 
 export default function ListLayout({ posts, title, initialDisplayPosts = []}: Props) {
@@ -25,7 +27,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = []}: Pr
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
 
   return (
-    <>
+    <Page>
+			<Section>
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -58,7 +61,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = []}: Pr
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((post) => {
-            const { slug, publishedAt, summary, tags } = post
+            const { slug, publishedAt, summary, tags, title } = post
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
@@ -91,6 +94,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = []}: Pr
           })}
         </ul>
       </div>
-    </>
+				</Section>
+    </Page>
   )
 }
