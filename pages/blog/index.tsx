@@ -71,10 +71,13 @@ export default function IndexBlog({
 						</svg>
 					</div>
 					{/* #endregion */}
-					<h3 className='mt-4 mb-4 tracking-tight'>
+					<CustomLink
+						href="/tags"
+						>
+					<h3 className='mt-4 mb-4 tracking-tight hover:text-neutrals-700/50 dark:hover:text-neutrals-700'>
 						{t('blog.allTags')}
 					</h3>
-
+			</CustomLink >
 					{/* #region //*=== Display getBlogTags (solution based on 'tailwind-nextjs-starter-blog') === */}
 					<div className="flex flex-wrap">
 						{Object.keys(tags).length === 0 && 'No tags found.'}
