@@ -4,7 +4,7 @@ import { useState } from 'react'
 import BlogPost from '@/components/BlogPost'
 import { InferGetStaticPropsType } from 'next'
 import { pick } from '@/lib/utils'
-import { allBlogs } from '.contentlayer/data'
+import { allBlogs } from 'contentlayer/generated'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Tag from '@/components/Tag'
@@ -14,7 +14,7 @@ import CustomLink from '@/components/CustomLink'
 import siteMetaData from '@/data/siteMetaData'
 import { PageSeo } from '@/components/Seo'
 import { useRouter } from 'next/router'
-import type { Blog } from '.contentlayer/types'
+import type { Blog } from 'contentlayer/generated'
 
 export default function IndexBlog({
 																		posts,
