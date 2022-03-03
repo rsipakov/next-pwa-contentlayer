@@ -1,7 +1,7 @@
 {
-  "name": "Red Cap",
-  "short_name": "Red Cap",
-  "description": "Website about Red Cap",
+  "name": "Big Cap",
+  "short_name": "Big Cap",
+  "description": "Website about Big Cap",
   "icons": [
 	{
 	  "src": "/static/favicons/android-chrome-192x192.png",
