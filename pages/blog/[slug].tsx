@@ -3,8 +3,8 @@ import { getTweets } from 'lib/twitter';
 import MDXcomponents from 'components/MDXComponents';
 import BlogLayout from 'layouts/blog';
 import Tweet from 'components/Tweet';
-import { allBlogs } from '.contentlayer/data';
-import type { Blog } from '.contentlayer/types';
+import { allBlogs } from 'contentlayer/generated';
+import type { Blog } from 'contentlayer/generated';
 
 export default function Post({ post, tweets }: { post: Blog; tweets: any[] }) {
   const Component = useMDXComponent(post.body.code);
@@ -38,9 +38,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, locale }) {
-	const post = allBlogs.find(
-		(post) => post.slug === params.slug && post.locale === locale
-	)
+	const post = allBlogs
+		.find((post) => post.slug === params.slug && post.locale === locale)
+
 	const tweets = await getTweets(post.tweetIds)
 
 	return { props: { post, tweets } }

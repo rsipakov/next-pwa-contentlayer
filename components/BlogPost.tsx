@@ -2,7 +2,7 @@ import CustomLink from '@/components/CustomLink'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import { Views } from '@/lib/types'
-import type { Blog } from '.contentlayer/types'
+import type { Blog } from 'contentlayer/generated'
 import Tag from '@/components/Tag'
 
 export default function BlogPost({

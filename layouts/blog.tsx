@@ -4,7 +4,7 @@ import Page from '@/components/page'
 import Section from '@/components/section'
 import ViewCounter from 'components/ViewCounter'
 import type { PropsWithChildren } from 'react'
-import type { Blog } from '.contentlayer/types'
+import type { Blog } from 'contentlayer/generated'
 import siteMetaData from '@/data/siteMetaData'
 import { PageSeo } from '@/components/Seo'
 import { useRouter } from 'next/router'
@@ -48,6 +48,7 @@ export default function BlogLayout({
 								<ViewCounter slug={post.slug} />
 							</p>
 						</div>
+						{/* FIXME: fix hover for <a> */}
 						<div className='w-full max-w-none mt-4 prose dark:prose-dark prose-a:hover:text-[#BAE3FF]'>
 							{children}
 						</div>
