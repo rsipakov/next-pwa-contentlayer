@@ -1,7 +1,7 @@
 import ListLayout from '@/layouts/ListLayout'
 import kebabCase from '@/lib/kebabCase'
 import { InferGetStaticPropsType } from 'next'
-import { allBlogs } from '.contentlayer/data'
+import { allBlogs } from 'contentlayer/generated'
 import * as temp from '@/lib/temp'
 
 export async function getStaticPaths() {
